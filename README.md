@@ -1,7 +1,6 @@
 # Molecular_Manager
 
-Molecular_Manager is a data management system to lookup or query an environmental compound database by retention time, polarity or compound type.
-Analytical data of a measured compound can be inserted into the database. Database administrator can add newly identified compound into the compound database.
+Molecular_Manager is a data management system to lookup or query an environmental compound database by retention time, polarity or compound type. The database contains **compounds**: a database of identified compounds, and **measured_compounds**: their analytical data. Analytical data of an identified compound can be inserted into **measured_compounds** by all users. Only database administrator can add a structure-confirmed compound into **compounds**.
 
 ## Requirements:
 
@@ -28,7 +27,7 @@ docker image build -t molecular_manager .
 docker run -p 5000:5000 -d molecular_manager
 ```
 
-## Usage
+## Database lookup and query:
 
 Please use software such as Postman to run the API interactively on your local machine.
 
@@ -56,3 +55,20 @@ To query **measured_compounds** based on *polarity* (positive or negative):
 ```
 http://127.0.0.1:5000/measured_compounds/query?query_params=polarity&value=negative
 ```
+
+## Usage: database lookup and query:
+
+## Stop the software:
+
+You will be able to see currently running docker containers using below command.
+
+```
+docker ps
+```
+
+Then copy the CONTAINER ID of the running container and execute the following command
+
+```
+docker stop <container_id>
+```
+
