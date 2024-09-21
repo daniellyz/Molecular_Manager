@@ -66,7 +66,7 @@ http://127.0.0.1:5000/measured_compounds/update
 
 The compound *3360* is present in **compounds** database, its "M+H" adduct is added in **measured_compounds**: 
 ```
- {
+{
      "compound_id": "3360",
      "compound_name": "Darunavir-d9",
      "retention_time": "18",
@@ -76,80 +76,94 @@ The compound *3360* is present in **compounds** database, its "M+H" adduct is ad
      "password": "555",
      "molecular_formula": "C27H29[2]H9N3O7S1",
      "type ": ""
-  }
+}
 ```
 The "M+FA-H" adduct is added for compound *3401*: 
 
 ```
-    {
-        "compound_id": "3401",
-        "compound_name": "Losartan-D4",
-        "retention_time": "18.3",
-        "retention_time_comment": "",
-        "adduct_name": "M+FA-H",
-        "user": "yliu",
-        "password": "555",
-        "molecular_formula": "C22H18[2]H4N6O1Cl1",
-        "type ": ""
-    }
+{
+      "compound_id": "3401",
+      "compound_name": "Losartan-D4",
+      "retention_time": "18.3",
+      "retention_time_comment": "",
+      "adduct_name": "M+FA-H",
+      "user": "yliu",
+      "password": "555",
+      "molecular_formula": "C22H18[2]H4N6O1Cl1",
+      "type ": ""
+}
 ```
 
 The "M+FA-H" adduct detected at another retention time is added for compound *3401*: 
 
 ```
-    {
-        "compound_id": "3401",
-        "compound_name": "Losartan-D4",
-        "retention_time": "21.3",
-        "retention_time_comment": "Isomer detected, different RT",
-        "adduct_name": "M+FA-H",
-        "user": "yliu",
-        "password": "555",
-        "molecular_formula": "",
-        "type ": ""
-    }
+{
+      "compound_id": "3401",
+      "compound_name": "Losartan-D4",
+      "retention_time": "21.3",
+      "retention_time_comment": "Isomer detected, different RT",
+      "adduct_name": "M+FA-H",
+      "user": "yliu",
+      "password": "555",
+      "molecular_formula": "",
+      "type ": ""
+}
 ```
 No update will be made for **measured_compounds** since compound *3401* is already measured with the same retention and same adduct:
 ```
-    {
-        "compound_id": "3401",
-        "compound_name": "Losartan-D4",
-        "retention_time": "18.3",
-        "retention_time_comment": "",
-        "adduct_name": "M-H",
-        "user": "yliu",
-        "password": "555",
-        "molecular_formula": "",
-        "type ": ""
-    }
+{
+      "compound_id": "3401",
+      "compound_name": "Losartan-D4",
+      "retention_time": "18.3",
+      "retention_time_comment": "",
+      "adduct_name": "M-H",
+      "user": "yliu",
+      "password": "555",
+      "molecular_formula": "",
+      "type ": ""
+}
 ```
 When database administrator (with correct user name and password) confirms a new structure, she/he can assign it a new compound id "50000",  both **compounds** and **measured_compounds** will be updated:
 
 ```
-    {
-        "compound_id": "50000",
-        "compound_name": "NADPH",
-        "retention_time": "15",
-        "retention_time_comment": "bad peak shape",
-        "adduct_name": "M+H",
-        "user": "Admin",
-        "password": "1111",
-        "molecular_formula": "C21H30N7O17P3 ",
-        "type ": "metabolites"
-    }
+{
+     "compound_id": "50000",
+     "compound_name": "NADPH",
+     "retention_time": "15",
+     "retention_time_comment": "bad peak shape",
+     "adduct_name": "M+H",
+     "user": "Admin",
+     "password": "1111",
+     "molecular_formula": "C21H30N7O17P3 ",
+     "type ": "metabolites"
+}
 ```
-Afterwards, all users can add extra analytical data of "50000" in the **measured_compounds**:
+Afterwards, any user can add extra analytical data of "50000" in the **measured_compounds**:
+```
+{
+      "compound_id": "50000",
+      "compound_name": "NADPH",
+      "retention_time": "16",
+      "retention_time_comment": "Isomer detected, different RT",
+      "adduct_name": "M+Na",
+      "user": "yliu",
+      "password": "555",
+      "molecular_formula": "",
+      "type ": "metabolites"
+}
+```
+
+The added data record will be displayed as a *json* file with computed **ion formula** and **ion mass**:
+
 ```
     {
-        "compound_id": "50000",
-        "compound_name": "NADPH",
-        "retention_time": "16",
-        "retention_time_comment": "Isomer detected, different RT",
-        "adduct_name": "M+Na",
-        "user": "yliu",
-        "password": "555",
-        "molecular_formula": "",
-        "type ": "metabolites"
+        "Added": "",
+        "Adduct ID": 2,
+        "Compound ID": 50000,
+        "Ion formula": "C21H30N7NaO17P3",
+        "Ion mass": 768.0803,
+        "Measured Compound ID": 1605,
+        "Retention Time ID": "C50000:RT16.0"
     }
 ```
 
