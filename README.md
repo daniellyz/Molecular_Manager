@@ -12,7 +12,7 @@ Analytical data of a measured compound can be inserted into the database. Databa
   sudo apt install docker.io
   sudo systemctl enable --now docker
   ```
-* Git
+* Git (latest version)
   
 ## Installation:
 
@@ -32,10 +32,19 @@ docker run -p 5000:5000 -d molecular_manager
 
 Please use software such as Postman to run the API interactively on your local machine.
 
-To send a request to retrieve a list of *compounds*:
+To send a request to retrieve a list of **compounds**:
 ```
 http://127.0.0.1:5000/compounds
 ```
-
-
+To send a request to retrieve a list of **measured_compounds**:
+```
+http://127.0.0.1:5000/measured_compounds
+```
+To query **measured_compounds** based on *retention time*:
+```
 http://127.0.0.1:5000/measured_compounds/query?query_params=RT&value=18.3
+```
+To query **measured_compounds** based on *type*:
+```
+http://127.0.0.1:5000/measured_compounds/query?query_params=type&value=metabolites
+```
