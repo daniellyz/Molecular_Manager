@@ -156,15 +156,15 @@ Afterwards, any user can add extra analytical data of "50000" in the **measured_
 The added data record will be displayed as a *json* file with computed **ion formula** and **ion mass**:
 
 ```
-    {
-        "Added": "",
-        "Adduct ID": 2,
-        "Compound ID": 50000,
-        "Ion formula": "C21H30N7NaO17P3",
-        "Ion mass": 768.0803,
-        "Measured Compound ID": 1605,
-        "Retention Time ID": "C50000:RT16.0"
-    }
+{
+     "Added": "",
+     "Adduct ID": 2,
+     "Compound ID": 50000,
+     "Ion formula": "C21H30N7NaO17P3",
+     "Ion mass": 768.0803,
+     "Measured Compound ID": 1605,
+     "Retention Time ID": "C50000:RT16.0"
+}
 ```
 
 You can delete all added data records by:
