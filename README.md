@@ -27,6 +27,10 @@ docker image build -t molecular_manager .
 docker run -p 5000:5000 -d molecular_manager
 ```
 
+## Database diagram:
+
+![alt text]([https://github.com/daniellyz/MergeION2/blob/master/inst/diagram.png]) "Diagram")
+
 ## Database lookup and query:
 
 Please use software such as Postman to run the API interactively on your local machine.
