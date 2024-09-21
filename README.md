@@ -48,3 +48,11 @@ To query **measured_compounds** based on *type*:
 ```
 http://127.0.0.1:5000/measured_compounds/query?query_params=type&value=metabolites
 ```
+To query **measured_compounds** without *type* specification:
+```
+http://127.0.0.1:5000/measured_compounds/query?query_params=type&value=Unknown
+```
+To query **measured_compounds** based on *polarity* (positive or negative):
+```
+http://127.0.0.1:5000/measured_compounds/query?query_params=polarity&value=negative
+```
