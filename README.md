@@ -139,7 +139,7 @@ When database administrator (with correct user name and password) confirms a new
      "user": "Admin",
      "password": "1111",
      "molecular_formula": "C21H30N7O17P3 ",
-     "type ": "metabolites"
+     "type": "metabolites"
 }
 ```
 Afterwards, any user can add extra analytical data of "50000" in the **measured_compounds**:
@@ -153,7 +153,7 @@ Afterwards, any user can add extra analytical data of "50000" in the **measured_
       "user": "yliu",
       "password": "555",
       "molecular_formula": "",
-      "type ": "metabolites"
+      "type": "metabolites"
 }
 ```
 
