@@ -11,7 +11,8 @@ Molecular_Manager is a data management system to lookup or query an environmenta
   sudo apt install docker.io
   sudo systemctl enable --now docker
   ```
-* Git (latest version)
+* Git (latest version): https://git-scm.com/
+* Postman (latest version): https://www.postman.com/downloads/
   
 ## Installation:
 
