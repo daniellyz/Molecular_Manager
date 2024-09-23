@@ -84,17 +84,19 @@ The compound *3360* is present in **compounds** database, its "M+H" adduct is ad
 }
 ```
 The added measured compound will be printed:
-```
-{
-        "Added measured compound": 1,
-        "Adduct ID": 1,
-        "Compound ID": 3360,
-        "Ion formula": "C27H29[2H]9N3O7S",
-        "Ion mass": 557.299,
-        "Measured Compound ID": 1605,
-        "Retention Time ID": "C3360:RT18.0"
-}
-```
+>
+>```
+>{
+>        "Added measured compound": 1,
+>        "Adduct ID": 1,
+>        "Compound ID": 3360,
+>        "Ion formula": "C27H29[2H]9N3O7S",
+>        "Ion mass": 557.299,
+>        "Measured Compound ID": 1605,
+>        "Retention Time ID": "C3360:RT18.0"
+>}
+>```
+>
 
 The "M+FA-H" adduct is added for compound *3401*: 
 
@@ -142,11 +144,13 @@ When adding a compound (here *3401*) that is already measured with the same rete
 }
 ```
 No update will be made for **measured_compounds** and you will see following message:
-```
-{
-    "Achtung": "Measured compound already exists with id: 1604"
-}
-```
+>
+>```
+>{
+>    "Achtung": "Measured compound already exists with id: 1604"
+>}
+>```
+>
 When database administrator (with correct user name and password) confirms a new structure, she/he can assign it a new compound id (here "50000") if molecular formula and type of the comopound are provided:
 ```
 {
@@ -205,17 +209,17 @@ Afterwards, any user can add extra analytical data of "50000" in the **measured_
 
 The added data record will be displayed as a *json* file with computed **ion formula** and **ion mass**:
 
-```
-{
-        "Added measured compound": 1,
-        "Adduct ID": 2,
-        "Compound ID": 50000,
-        "Ion formula": "C21H30N7NaO17P3",
-        "Ion mass": 768.0803,
-        "Measured Compound ID": 1609,
-        "Retention Time ID": "C50000:RT16.0"
-}
-```
+>```
+>{
+>        "Added measured compound": 1,
+>        "Adduct ID": 2,
+>        "Compound ID": 50000,
+>        "Ion formula": "C21H30N7NaO17P3",
+>        "Ion mass": 768.0803,
+>        "Measured Compound ID": 1609,
+>        "Retention Time ID": "C50000:RT16.0"
+>}
+>```
 
 You can delete all added data records (**compounds** and **measured_compounds**) by:
 ```
