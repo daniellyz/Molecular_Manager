@@ -50,6 +50,7 @@ http://127.0.0.1:5000/measured_compounds?RT=18
 To query **measured_compounds** based on *type*:
 ```
 http://127.0.0.1:5000/measured_compounds?type=metabolite
+```
 To query **measured_compounds** without being previously specified with *type*:
 ```
 http://127.0.0.1:5000/measured_compounds?type=Unknown
