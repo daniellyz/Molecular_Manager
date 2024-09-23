@@ -20,8 +20,12 @@ Clone the software from Github to your local directory:
 git clone https://github.com/daniellyz/Molecular_Manager.git
 ```
 
-Make sure Docker is running on your machine and type:
+Please check Docker is running on your machine (Windows):
+```
+docker info
+```
 
+Please build and run the docker:
 ```
 docker image build -t molecular_manager .
 docker run -p 5000:5000 -d molecular_manager
