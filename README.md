@@ -163,29 +163,29 @@ When database administrator (with correct user name and password) confirms a new
 ```
 Both **compounds** and **measured_compounds** will be updated:
 
-```
-    [
-        {
-            "Added measured compound": 1,
-            "Adduct ID": 1,
-            "Compound ID": 50000,
-            "Ion formula": "C21H31N7O17P3",
-            "Ion mass": 746.0984,
-            "Measured Compound ID": 1608,
-            "Retention Time ID": "C50000:RT15.0"
-        }
-    ],
-    [
-        {
-            "Added compound": 1,
-            "Compound ID": 50000,
-            "Compound name": "NADPH",
-            "Neutral formula": "C21H30N7O17P3 ",
-            "Neutral mass": 745.0911,
-            "Type": "metabolites"
-        }
-    ]
-```
+>
+>    [
+>        {
+>            "Added measured compound": 1,
+>            "Adduct ID": 1,
+>            "Compound ID": 50000,
+>            "Ion formula": "C21H31N7O17P3",
+>            "Ion mass": 746.0984,
+>            "Measured Compound ID": 1608,
+>            "Retention Time ID": "C50000:RT15.0"
+>        }
+>    ],
+>    [
+>        {
+>            "Added compound": 1,
+>            "Compound ID": 50000,
+>            "Compound name": "NADPH",
+>            "Neutral formula": "C21H30N7O17P3 ",
+>            "Neutral mass": 745.0911,
+>            "Type": "metabolites"
+>        }
+>    ]
+>
 
 Afterwards, any user can add extra analytical data of "50000" in the **measured_compounds**:
 ```
