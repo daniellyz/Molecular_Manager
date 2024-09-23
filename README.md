@@ -164,6 +164,7 @@ When database administrator (with correct user name and password) confirms a new
 Both **compounds** and **measured_compounds** will be updated:
 
 >
+> ```
 >    [
 >        {
 >            "Added measured compound": 1,
@@ -185,7 +186,7 @@ Both **compounds** and **measured_compounds** will be updated:
 >            "Type": "metabolites"
 >        }
 >    ]
->
+>```
 
 Afterwards, any user can add extra analytical data of "50000" in the **measured_compounds**:
 ```
