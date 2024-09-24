@@ -215,7 +215,7 @@ def query_measured_compounds():
         return jsonify(res_list)
 
     else:
-        return jsonify({'Warning': 'No measured compounds found.'}), 400
+        return jsonify({'Error': 'Please specify a value for the query parameter.'}), 400
 
 # Post method to add a new measured compound into the database:
 
@@ -240,6 +240,9 @@ def update_measured_compounds():
     # Retrieve data from input json:
 
     new_measured_compound = request.get_json()
+    if new_measured_compound is None:
+        return jsonify({'error': 'No JSON data provided or incorrect Content-Type'}), 400
+
     cid = int(new_measured_compound.get('compound_id'))
     cpd_name = str(new_measured_compound.get('compound_name'))
     rt = new_measured_compound.get('retention_time')
