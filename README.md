@@ -31,6 +31,10 @@ Please build and run the docker:
 docker image build -t molecular_manager .
 docker run -p 5000:5000 -d molecular_manager
 ```
+Unittest if you have Python installed:
+```
+python TestAPI.py
+```
 
 ## Database diagram:
 
